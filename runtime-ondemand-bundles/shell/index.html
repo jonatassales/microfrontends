@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Runtime RequireJS Integration</title>
+  <script src="node_modules/requirejs/require.js"></script>
+</head>
+<body>
+  <div id="micro-frontend-root"></div>
+  <script>
+    function getModuleNameFromUrl() {
+      const webComponentsByRoute = {
+        '/': 'micro-bundle-1',
+        '/micro-1': 'micro-bundle-1',
+        '/micro-2': 'micro-bundle-2',
+      }
+
+      return webComponentsByRoute[window.location.pathname]
+    }
+
+    const moduleName = getModuleNameFromUrl();
+
+    require([`http://localhost:5000/${moduleName}.js`]);
+  </script>
+</body>
+</html>

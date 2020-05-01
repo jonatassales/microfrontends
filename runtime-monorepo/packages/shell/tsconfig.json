@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "outDir": "lib",
+    "baseUrl": "./",
+    "target": "esnext",
+    "module": "esnext",
+    "lib": ["ES2015", "DOM", "es2018.promise", "es2017"],
+    "declaration": true,
+    "jsx": "react",
+    "composite": false,
+    "downlevelIteration": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": [
+      "react",
+      "react-dom",
+      "styled-components",
+      "webpack-env"
+    ]
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "lib/**"
+  ]
+}
