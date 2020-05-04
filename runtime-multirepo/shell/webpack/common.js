@@ -34,7 +34,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'React Monorepo Microfrontends'
+      title: 'React Multirepo Microfrontends'
     }),
     new webpack.DefinePlugin({
       'process.env': { NODE_ENV: JSON.stringify(NODE_ENV) },
