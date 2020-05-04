@@ -1,0 +1,15 @@
+version: '3.3'
+
+services:
+  web:
+    container_name: runtime_multirepo_web
+    ports: 
+      - "8000:80"
+    build: shell/
+    depends_on: 
+      - server
+  server:
+    container_name: runtime_multirepo_server
+    ports:
+      - "5000:5000"
+    build: "server/"

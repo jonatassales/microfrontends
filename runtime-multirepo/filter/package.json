@@ -1,0 +1,22 @@
+{
+  "name": "@jonatassales/filter",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@jonatassales/communication-sdk": "^0.0.3",
+    "apollo-boost": "^0.4.7",
+    "graphql": "14.5.8",
+    "react": "^16.13.0",
+    "react-apollo-hooks": "^0.5.0",
+    "styled-components": "^5.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.23",
+    "@types/styled-components": "^5.0.1",
+    "typescript": "^3.8.3"
+  }
+}

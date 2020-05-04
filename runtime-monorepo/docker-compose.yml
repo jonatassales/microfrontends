@@ -1,7 +1,15 @@
-version: '3'
+version: '3.3'
 
 services:
-  redis:
-    image: redis
+  web:
+    container_name: runtime_monorepo_web
+    ports: 
+      - "9000:80"
+    build: client/
+    depends_on: 
+      - server
+  server:
+    container_name: runtime_monorepo_server
     ports:
-      - "6379:6379"
+      - "4000:4000"
+    build: "server/"

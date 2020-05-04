@@ -5,6 +5,7 @@
   <script src="node_modules/requirejs/require.js"></script>
 </head>
 <body>
+  <h1>Hi, I'm shared!</h1>
   <div id="micro-frontend-root"></div>
   <script>
     function getModuleNameFromUrl() {
@@ -19,7 +20,7 @@
 
     const moduleName = getModuleNameFromUrl();
 
-    require([`http://localhost:5000/${moduleName}.js`]);
+    require([`http://localhost:7001/${moduleName}.js`]);
   </script>
 </body>
 </html>

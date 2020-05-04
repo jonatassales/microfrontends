@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "version": "0.0.1",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "build": "lerna run build --concurrency=3 --stream --sort"
+  },
+  "devDependencies": {
+    "lerna": "^3.20.2",
+    "typescript": "^3.8.3"
+  }
+}
