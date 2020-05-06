@@ -3,24 +3,36 @@ const path = require('path')
 const merge = require('webpack-merge')
 const common = require('./common')
 
+const BUILD_PATH = path.resolve(__dirname, '../build')
+
 module.exports = merge(common, {
   mode: 'development',
   entry: [
     'react-hot-loader/patch',
-    'webpack-hot-middleware/client?path=/__hot_reload&reload=true',
     './src/main.tsx'
   ],
   output: {
-    path: path.resolve(__dirname, '../build'),
-    publicPath: '/',
+    path: BUILD_PATH,
     filename: 'bundle.js',
   },
+  module: {
+    rules: [
+      {
+        test: /\.(j|t)sx?$/,
+        exclude: /node_modules/,
+        use: ['source-map-loader'],
+        enforce: 'pre'
+      }
+    ]
+  },
+  devtool: 'inline-source-map',
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin()
   ],
   devServer: {
-    historyApiFallback: true
+    historyApiFallback: true,
+    contentBase: BUILD_PATH
   },
   watch: true
 })

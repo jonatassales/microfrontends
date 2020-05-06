@@ -8,7 +8,7 @@ module.exports = merge(common, {
   entry: ['./src/main.tsx'],
   output: {
     path: path.resolve(__dirname, '../build'),
-    filename: 'index.[hash].js'
+    filename: '[name].[hash].js'
   },
   plugins: [
     new webpack.optimize.ModuleConcatenationPlugin()
