@@ -6,7 +6,7 @@ interface CommunicationProviderProps {
   children: ReactNode;
 }
 
-export default function CommunicationProvider(props: CommunicationProviderProps): ReactElement {
+export default function Provider(props: CommunicationProviderProps): ReactElement {
   const { children } = props
   return (
     <Context.Provider value={{ publish, subscribe, unsubscribe }}>
